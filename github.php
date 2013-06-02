@@ -8,15 +8,21 @@
        2 => array("file", $errfile, "w")
    );
    $proc = proc_open('git pull', $descriptorspec, $pipes);
-
-   if (!is_resource($proc)) {file_put_contents('/var/chroot/home/content/97/11124597/html/projects/Test/logs.txt', $payload, FILE_APPEND);}
+   //Open the file in append mode
+   $handle = fopen($my_file, 'a') or die('Cannot open file:  '.$my_file);
+   if (!is_resource($proc)) 
+   {
+    $data = "Yup yahan to aya tha launda! Request happening";
+    fwrite($handle, $data);
+   }
 
    fclose($pipes[0]);    //Don't really want to give any input
 
    $exit = proc_close($proc);
    $stdout = file($outfile);
    $stderr = file($errfile);
-   file_put_contents('/var/chroot/home/content/97/11124597/html/projects/Test/logs.txt', $e . ' ' . $payload, FILE_APPEND);
+   $data = $payload;
+   fwrite($handle, $data);
    unlink($outfile);
    unlink($errfile);
 
