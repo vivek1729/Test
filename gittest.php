@@ -18,7 +18,7 @@ try
                 // Write to file
                 $my_file = 'logs.txt';
 				$handle = fopen($my_file, 'w') or die('Cannot open file:  '.$my_file);
-				$data = $payload;
+				$data = "harami kutte file write to hona chahiye!";
 				fwrite($handle, $data);
         }
 				 
