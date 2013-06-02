@@ -22,7 +22,7 @@
    $exit = proc_close($proc);
    $stdout = file($outfile);
    $stderr = file($errfile);
-   $data = $payload;
+   $data = "bhen kuchh to ho harami!!!!!";
    fwrite($handle, $data);
    unlink($outfile);
    unlink($errfile);
