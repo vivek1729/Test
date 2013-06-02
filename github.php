@@ -9,6 +9,7 @@
    );
    $proc = proc_open('git pull', $descriptorspec, $pipes);
    //Open the file in append mode
+   $my_file = 'logs.txt';
    $handle = fopen($my_file, 'a') or die('Cannot open file:  '.$my_file);
    if (!is_resource($proc)) 
    {
