@@ -1,7 +1,7 @@
 <?php
    $outfile = tempnam(".", "cmd");
    $errfile = tempnam(".", "cmd");
-   $payload = json_decode($_REQUEST['payload']);
+   $payload = json_decode($_POST['payload']);
    $descriptorspec = array(
        0 => array("pipe", "r"),
        1 => array("file", $outfile, "w"),
