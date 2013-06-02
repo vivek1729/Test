@@ -16,6 +16,9 @@ local.properties
 .settings/
 .loadpath
 
+#Webhook folder
+webhook-deploy
+
 # External tool builders
 .externalToolBuilders/
 
