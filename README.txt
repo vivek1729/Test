@@ -1,2 +1,2 @@
-This is a test readme file
-for testing gitHub!
+This is a test readme file.
+Readme files support Markdown also!
